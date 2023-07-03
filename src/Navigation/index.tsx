@@ -22,23 +22,23 @@ function Navigation() {
                 <div className="dropdown">
                     <button className="dropbtn">Work</button>
                     <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="wyattlarson.net">Link 1</a>
+                        <a href="wyattlarson.net">Link 2</a>
+                        <a href="wyattlarson.net">Link 3</a>
                     </div>
                 </div>
                 <div className="dropdown">
                     <button className="dropbtn">Favorites</button>
                     <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="wyattlarson.net">Link 1</a>
+                        <a href="wyattlarson.net">Link 2</a>
+                        <a href="wyattlarson.net">Link 3</a>
                     </div>
                 </div>
                 <div className="dropdown">
                     <button className="dropbtn">Social</button>
                     <div className="dropdown-content">
-                        <a href="https://www.linkedin.com/in/wyatt-larson/" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/wyatt-larson/" target="_blank" rel="noreferrer">LinkedIn</a>
                     </div>
                 </div>
             </div>
