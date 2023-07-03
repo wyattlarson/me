@@ -122,21 +122,24 @@
   }
 
   @media screen and (max-width: 702px) {
-    .navbar {
-      white-space: nowrap;
-    }
+
     .dropdown .dropbtn{
       font-size: 7.5vw;
-      padding: 5px 7px;
+      padding: 20px 7px;
     }
     .date {
       display: none;
     }
     .circle {
-      width: 14px;
-      height: 14px;
+      width: 20px;
+      height: 20px;
       margin-left: 6px;
-      border-radius: 12px;
-      cursor: pointer;
     }
+}
+
+@media screen and (max-width: 375px) {
+
+  .dropdown .dropbtn{
+    font-size: 6vw;
+  }
 }
