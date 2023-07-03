@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './index.css';
+import './walmart.css';
 
 
 function Walmart() {

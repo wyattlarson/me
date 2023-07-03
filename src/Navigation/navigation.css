@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'pxlxxl';
-    src: local('pxlxxl'), url(./pxlxxl.ttf) format('truetype');
+    src: local('pxlxxl'), url(../fonts/pxlxxl.ttf) format('truetype');
   }
 
 
@@ -56,12 +56,12 @@
     background-color: #f37725;
   }
 
-  .red {
-    background-color: #3cf452;
+  .black {
+    background-color: rgb(40, 39, 37);
   }
 
-  .green {
-    background-color: #e83939;
+  .blue {
+    background-color: #6DB3F2;
   }
 
   .circle:hover {
