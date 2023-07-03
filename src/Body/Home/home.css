@@ -5,7 +5,7 @@
 
 .homePage {
     background-image: url("banner-dunes.jpeg");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
     font-family: "pxlxxl";
@@ -44,4 +44,18 @@
     color: white;
     font-size: 60px;
     margin-bottom: 60px;
+}
+
+@media screen and (max-width: 702px) {
+    .homeBanner{
+        flex-direction: column;
+        padding: 20px 10% 70px 10%;
+    }
+    .wyatt {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .profile{
+        height: 150px;
+    }
 }
