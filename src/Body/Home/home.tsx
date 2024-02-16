@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-import Profile from './profile.jpg'
+import Profile from './profile.png'
 
 
 function Home(props: any) {
