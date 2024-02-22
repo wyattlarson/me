@@ -10,7 +10,8 @@
     font-family: "pxlxxl";
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    box-shadow: 0px 9px 0px rgb(46 46 46 / 100%);
   }
 
   .home {
