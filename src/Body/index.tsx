@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
     Routes,
     Route,
@@ -9,7 +9,7 @@ import Walmart from './Walmart/walmart';
 
 
 function Body(props: any) {
-
+    const [videoLoaded, setVideoLoaded] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -20,7 +20,10 @@ function Body(props: any) {
     }, []);
     return (
         <div className='body'>
-            <video autoPlay muted loop className='background-video' ref={videoRef}>
+            {!videoLoaded && (
+                <div className="placeholder-image"></div>
+            )}
+            <video autoPlay muted loop className={`background-video ${videoLoaded ? 'loaded' : ''}`} onLoadedData={() => setVideoLoaded(true)} ref={videoRef}>
                 <source src="https://firebasestorage.googleapis.com/v0/b/wyattlarsonblog.appspot.com/o/Untitled.mov?alt=media&token=0d1af663-8427-43c9-9685-564c2d7ac54f" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
