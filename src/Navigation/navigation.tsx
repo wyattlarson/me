@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navigation(props: any) {
     const [fullDate, setFullDate] = useState("");
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() =>{
         let newDate = new Date()
@@ -14,11 +15,15 @@ function Navigation(props: any) {
         setFullDate(`${date}-${month}-${year}`)
     },[]);
 
+    const handleLinkClick = () => {
+        setDropdownOpen(false);
+    };
+
     return (
         <div className="navbar">
             <div>
-                <div className="dropdown ">
-                    <button className="dropbtn home"><Link to='/' className="dropbtn home">Home</Link></button>
+                <div className={`dropdown ${dropdownOpen ? 'open' : ''}`}>
+                    <button className="dropbtn home"><Link to='/' className="dropbtn home" onClick={handleLinkClick}>Home</Link></button>
                     
                 </div>
                 <div className="dropdown">

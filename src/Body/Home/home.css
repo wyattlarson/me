@@ -21,7 +21,7 @@
 .homeBanner {
     display: flex;
     justify-content: space-between;
-    padding: 40px 10% 40px 10%;
+    padding: 40px 25% 40px 25%;
     align-items: center;
 }
 
@@ -45,6 +45,8 @@
     color: white;
     font-size: 60px;
     margin-bottom: 60px;
+    padding: 0 2% 0 2%;
+
 }
 
 @media screen and (max-width: 702px) {
@@ -53,7 +55,7 @@
         padding: 20px 10% 70px 10%;
     }
     .wyatt {
-        font-size: 60px;
+        font-size: 80px;
         margin-bottom: 20px;
     }
     .profile{
