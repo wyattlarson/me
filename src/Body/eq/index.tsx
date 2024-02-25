@@ -37,18 +37,20 @@ function EqComponent(props: any) {
         <div className="image-container">
           <img src={Race} alt="Race" />
         </div>
-        <div className="image-container">
-          <img src={Grands} alt="Shirts" />
-        </div>
-        <div className="image-container">
-          <img src={Me} alt="Me and Dad" />
-        </div>
+        
         <hr />
 
         <div className="section-title">Results</div>
         <p>The following attests to Lloyd’s business acumen, his tact and charisma in business and other phases of life, and most of all, his overall integrity, fairness, dependability and compassion toward his fellowmen—and his testimony of—The Church of Jesus Christ of Latter-day Saints.
 
           Moreover, we need to be well aware that Lloyd became active in his church—giving up for good, his cigars and beer at age 50, after the hospitalization for a bleeding-ulcer-scare. As you have read in previous parts of his history, it is impressed upon us that he always had pride in his Mormon heritage, and never, was he critical of, or an antagonist of the Church; for he cooperated in every way through encouragement and affording transportation to family that didn’t drive, to always take them to their church meetings and activities.</p>
+        
+          <div className="image-container">
+          <img src={Grands} alt="Shirts" />
+        </div>
+        <div className="image-container">
+          <img src={Me} alt="Me and Dad" />
+        </div>
         <div className="list-container">
           <div className="section-title">Questions</div>
           <ul>
