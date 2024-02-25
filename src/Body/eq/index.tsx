@@ -73,11 +73,6 @@ function EqComponent(props: any) {
             <li>Reflecting on your own spiritual journey, what legacy do you hope to leave for future generations?</li>
           </ul>
         </div>
-
-        <div className="paragraph-container">
-          <div className="section-title">Paragraph Section</div>
-          <p></p>
-        </div>
       </div>
     </div>
   );
