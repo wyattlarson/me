@@ -4,6 +4,9 @@ import Truck from './truck.jpg'
 import Gramps from './Gramps.jpg'
 import Fender from './fender.jpg'
 import Race from './Race.jpg'
+import Grands from './grands.png'
+import Me from './meanddad.jpg'
+
 
 
 
@@ -33,6 +36,12 @@ function EqComponent(props: any) {
         </div>
         <div className="image-container">
           <img src={Race} alt="Race" />
+        </div>
+        <div className="image-container">
+          <img src={Grands} alt="Shirts" />
+        </div>
+        <div className="image-container">
+          <img src={Me} alt="Me and Dad" />
         </div>
         <hr />
 
