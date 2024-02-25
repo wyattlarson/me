@@ -12,14 +12,14 @@ function EqComponent(props: any) {
     <div className="component-container" style={{ color: props.activeColor }}>
       <div className="section-title">Elders Quorum Lesson</div>
       <div className="image-container">
-        <img src={Truck} alt="Your Image" />
+        <img src={Truck} alt="Truck Meme" />
       </div>
 
       <div className="content-container">
         <div className="paragraph-container">
           <div className="section-title">The "Swede"</div>
           <div className="image-container">
-            <img src={Gramps} alt="Your Image" />
+            <img src={Gramps} alt="Grandpa" />
           </div>
           <hr />
           <p>"They made their home in Highland Park, and attended the Garbanza Ward.
@@ -29,10 +29,10 @@ function EqComponent(props: any) {
             He went back to his Dr. for a checkup about a year later.  The Dr. said, “I don’t know how you did it, but you have recovered wonderfully.” For him, biking was a godsend and restored his well beaten body to a robust vigorous one of full energy and vitality."</p>
         </div>
         <div className="image-container">
-          <img src={Fender} alt="Your Image" />
+          <img src={Fender} alt="Fender AD" />
         </div>
         <div className="image-container">
-          <img src={Race} alt="Your Image" />
+          <img src={Race} alt="Race" />
         </div>
         <hr />
 
