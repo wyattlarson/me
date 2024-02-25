@@ -14,7 +14,8 @@ function Home(props: any) {
                 <div className='wyatt'>wyatt larson</div>
                 <img className='profile' src={Profile} alt='profile' />
             </div>
-            <div className='fullstack'>I am a jack of all trades, some call it a <span className='developer' style={{color: developerColor}}>fullstack developer</span></div>
+            {/* <div className='fullstack'>I am a jack of all trades, some call it a <span className='developer' style={{color: developerColor}}>fullstack developer</span></div> */}
+            <div className='fullstack'><span className='developer' style={{color: developerColor}}>Coming Soon</span></div>
 
             {/* <div className='scandia' ref={myRef}>I worked at scandia</div> */}
         </div>

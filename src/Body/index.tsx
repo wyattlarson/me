@@ -5,7 +5,8 @@ import {
 } from "react-router-dom";
 import './index.css';
 import Home from './Home/home';
-import Walmart from './Walmart/walmart';
+// import Walmart from './Walmart/walmart';
+import EqComponent from './eq';
 
 
 function Body(props: any) {
@@ -20,7 +21,7 @@ function Body(props: any) {
     }, []);
     return (
         <div className='body'>
-            {!videoLoaded && (
+            {true && (
                 <div className="placeholder-image"></div>
             )}
             <video autoPlay muted loop className={`background-video ${videoLoaded ? 'loaded' : ''}`} onLoadedData={() => setVideoLoaded(true)} ref={videoRef}>
@@ -30,7 +31,8 @@ function Body(props: any) {
             <div className='window'>
                 <Routes>
                     <Route path="/" element={<Home activeColor={props.activeColor} />} />
-                    <Route path="/walmart" element={<Walmart />} />
+                    {/* <Route path="/walmart" element={<Walmart />} /> */}
+                    <Route path="/eq" element={<EqComponent activeColor={props.activeColor}/>} />
                 </Routes>
             </div>
         </div>
