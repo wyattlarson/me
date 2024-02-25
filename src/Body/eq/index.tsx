@@ -56,6 +56,7 @@ function EqComponent(props: any) {
           <ul>
             <li>How does keeping yourself physically healthy bless your family and your posterity?</li>
             <li>What traditions or physical activities do you want to pass down in your family?</li>
+            <li>A man prioritizing his physical health had a generational impact on his family. God gives us health commandments like the Word of Wisdom. How does taking care of our bodies affect our spiritual health?</li>
           </ul>
         </div>
 
@@ -75,7 +76,7 @@ function EqComponent(props: any) {
 
         <div className="paragraph-container">
           <div className="section-title">Paragraph Section</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+          <p></p>
         </div>
       </div>
     </div>
