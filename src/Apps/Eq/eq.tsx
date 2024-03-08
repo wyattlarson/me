@@ -1,11 +1,11 @@
 import React from 'react';
-import './index.css';
-import Truck from './truck.jpg'
-import Gramps from './Gramps.jpg'
-import Fender from './fender.jpg'
-import Race from './Race.jpg'
-import Grands from './grands.png'
-import Me from './meanddad.jpg'
+import './eq.css';
+import Truck from './images/truck.jpg'
+import Gramps from './images/Gramps.jpg'
+import Fender from './images/fender.jpg'
+import Race from './images/Race.jpg'
+import Grands from './images/grands.png'
+import Me from './images/meanddad.jpg'
 
 
 

@@ -3,24 +3,29 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import './index.css';
+import './blog.css';
 import Home from './Home/home';
-// import Walmart from './Walmart/walmart';
-import EqComponent from './eq';
+import Navigation from './Navigation/navigation';
+import Walmart from './Walmart/walmart';
 
 
-function Body(props: any) {
+function Blog(props: any) {
     const [videoLoaded, setVideoLoaded] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [activeColor, setActiveColor] = useState("rgb(40, 39, 37)");
+
 
     useEffect(() => {
         if (videoRef.current) {
-            // Adjust the playback rate of the video
-            videoRef.current.playbackRate = 0.6; // Example: 0.5 for half speed
+            videoRef.current.playbackRate = 0.6;
         }
     }, []);
+
     return (
         <div className='body'>
+            <header className="App-header">
+                <Navigation setActiveColor={setActiveColor} />
+            </header>
             {true && (
                 <div className="placeholder-image"></div>
             )}
@@ -30,13 +35,12 @@ function Body(props: any) {
             </video>
             <div className='window'>
                 <Routes>
-                    <Route path="/" element={<Home activeColor={props.activeColor} />} />
-                    {/* <Route path="/walmart" element={<Walmart />} /> */}
-                    <Route path="/eq" element={<EqComponent activeColor={props.activeColor}/>} />
+                    <Route path="/" element={<Home activeColor={activeColor} />} />
+                    <Route path="/walmart" element={<Walmart />} />
                 </Routes>
             </div>
         </div>
     );
 }
 
-export default Body;
+export default Blog;

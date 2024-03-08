@@ -4,6 +4,12 @@
     border: 5px;
 }
 
+.App {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: auto;
+  }
+
 .window {
     background: white;
     overflow: scroll;
