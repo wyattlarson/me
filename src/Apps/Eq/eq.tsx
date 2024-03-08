@@ -13,7 +13,7 @@ import Me from './images/meanddad.jpg'
 function EqComponent(props: any) {
   return (
     <div className="component-container" style={{ color: props.activeColor }}>
-      <div className="section-title">Elders Quorum Lesson</div>
+      <div className="section-title">Elders Quorum Lesson 1</div>
       <div className="image-container">
         <img src={Truck} alt="Truck Meme" />
       </div>
