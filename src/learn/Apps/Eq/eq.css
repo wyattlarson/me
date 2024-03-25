@@ -1,0 +1,47 @@
+/* Component Container */
+.component-container {
+  max-width: 100%;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Image Container */
+.image-container {
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Content Container */
+.content-container {
+  margin-bottom: 20px;
+}
+
+/* List Container */
+.list-container {
+  margin-bottom: 20px;
+}
+
+.list-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Paragraph Container */
+.paragraph-container {
+  margin-bottom: 20px;
+}
+
+li {
+  padding: 5px
+}
