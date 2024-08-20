@@ -12,16 +12,16 @@ const Landing = () => {
                                 <img src="assets/Logo.webp" alt="Logo" />
                             </div>
                             <nav className="primary-nav">
-                                <ul role="list">
-                                    <li><a href="#">Why join us</a></li>
-                                    <li><a href="#">The founders</a></li>
-                                    <li><a href="#">Beta info</a></li>
+                                <ul>
+                                    <li><a href="/">Why join us</a></li>
+                                    <li><a href="/">The founders</a></li>
+                                    <li><a href="/">Beta info</a></li>
                                 </ul>
                             </nav>
                             <div className="flex-group" aria-label="social links">
-                                <a href="#">X</a>
-                                <a href="#">IG</a>
-                                <a href="#">YT</a>
+                                <a href="/">X</a>
+                                <a href="/">IG</a>
+                                <a href="/">YT</a>
                             </div>
                         </div>
                     </div>
@@ -35,11 +35,11 @@ const Landing = () => {
                     </div>
                 </div>
 
-                <img className="parallax__bg" src="assets/bg.jpg" alt="Background" />
+                <img className="parallax__bg" src="assets/bg.jpg" alt="Background Dusty" />
                 <img className="parallax__dust" src="assets/dust.webp" alt="Dust" />
                 <img className="parallax__foreground-back" src="assets/foreground-back.webp" alt="Foreground Back" />
                 <img className="parallax__foreground-front" src="assets/foreground-front.webp" alt="Foreground Front" />
-                <img className="parallax__jax" src="assets/jax.webp" alt="Jax" />
+                <img className="parallax__jax" src="assets/jax.webp" alt="Jax Character" />
                 <img className="parallax__luna" src="assets/luna.webp" alt="Luna" />
                 <img className="parallax__manny" src="assets/manny.webp" alt="Manny" />
                 <img className="parallax__rays" src="assets/rays.webp" alt="Rays" />
