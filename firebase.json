@@ -5,7 +5,7 @@
   "hosting": [
     {
       "target": "wyattlarson-portfolio",
-      "public": "src/portfolio",
+      "public": "src/",
       "rewrites": [
         {
           "source": "**",
@@ -16,24 +16,7 @@
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ],
-      "site": "wyattlarson-portfolio"
-    },
-    {
-      "target": "wyattlarson-learn",
-      "public": "src/learn",
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "site": "wyattlarson-learn"
+      ]
     }
   ],
   "emulators": {
