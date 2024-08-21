@@ -6,12 +6,20 @@ import Fender from './images/fender.jpg'
 import Race from './images/Race.jpg'
 import Grands from './images/grands.png'
 import Me from './images/meanddad.jpg'
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 
 
 
 function EqComponent(props: any) {
+  const lenisOptions = {
+    lerp: 0.1,
+    duration: 1.5,
+    smoothTouch: false, //smooth scroll for touch devices
+    smooth: true,
+  };
   return (
+    <ReactLenis root options={lenisOptions}>
     <div className="component-container" style={{ color: props.activeColor }}>
       <div className="section-title">Elders Quorum Lesson 1</div>
       <div className="image-container">
@@ -75,6 +83,7 @@ function EqComponent(props: any) {
         </div>
       </div>
     </div>
+    </ReactLenis>
   );
 }
 

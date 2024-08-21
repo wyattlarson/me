@@ -1,195 +1,232 @@
 .parallax {
-    /* overflow: hidden; */
-    position: relative;
-    z-index: 0;
-    min-height: 75vh;
-    display: grid;
-    grid-template-areas: "stack";
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 0;
+  min-height: 75vh;
+  max-height: 80vh;
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+.parallax > img {
+  max-height: 80vh;
+}
+
+
+
+.hero {
+  --parallax-speed: 5;
+  z-index: 10;
+}
+
+.primary-header {
+  --parallax-speed: -5;
+  z-index: 11;
+}
+
+.parallax__bg {
+  --parallax-speed: 5;
+  z-index: 1;
+  width: 100%;
+}
+
+.parallax__dust {
+  --parallax-speed: -5;
+  z-index: 2;
+  filter: opacity(1) grayscale(90%);
+}
+
+.parallax__rays {
+  --parallax-speed: 1;
+  z-index: 3;
+  filter: opacity(1) grayscale(90%);
+  transform: scaleX(-1);
+  width: 100%
+}
+
+.parallax__jax {
+  --parallax-speed: 10;
+  z-index: 5;
+  margin-left: 10%;
+  
+  align-self: end;
+}
+
+.parallax__foreground-front,
+.parallax__foreground-back {
+  z-index: 999;
+  align-self: end;
+  transform: translateY(1px);
+  filter: opacity(1) grayscale(50%);
+  width: 100%;
+ 
+}
+
+.parallax__foreground-back {
+  transform: scaleY(1.4);
+  transform-origin: bottom;
+  mix-blend-mode: hard-light;
+}
+
+.main-content {
+  position: relative;
+  /* z-index: 1; */
+  background: #010210;
+  padding-block: 6rem;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 200px));
   }
-  
-  .parallax > * {
-    grid-area: stack;
-    animation: parallax linear;
-    animation-timeline: scroll();
+}
+
+/* general styling */
+
+html {
+  color-scheme: dark;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700; /* for demo only */
+  text-transform: uppercase; /* for demo only */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: min(65rem, 100% - 4rem);
+  margin-inline: auto;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  font: inherit;
+  font-style: italic;
+  text-transform: uppercase;
+  background: hsl(279, 75%, 59%);
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.125em;
+}
+
+.primary-header {
+  padding-block: 2rem;
+}
+
+.primary-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav ul {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.primary-nav a {
+  color: #1F2227;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+.hero {
+  margin-block-start: max(20vh, 8rem);
+  position: fixed;
+}
+
+.hero__title {
+  margin-top: 15vh;
+  font-size: 2rem;
+  max-width: 10ch;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black;
+    z-index: -1;
+    scale: 1;
+    opacity: 0.6;
+    filter: blur(5rem);
+    translate: -50%;
   }
-  
-  .parallax > img {
-    width: 100%;
+}
+.wrapper > span {
+  font-style: italic;
+  font-size: 90px;
+  display: block;
+  line-height: 1;
+}
+
+.scrollReveal span {
+  display: inline;
+  color: hsl(0 0% 100% / 0.1);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, white, rgb(255, 255, 255));
+  animation: scrollReveal linear forwards;
+  animation-timeline: view();
+  transform: translateZ(0);
+}
+
+.scrollReveal span {
+  animation-range: cover 10% contain 15%;
+}
+
+@keyframes scrollReveal {
+  to {
+    background-size: 100% 100%;
   }
-  
-  .primary-header,
-  .hero {
-    --parallax-speed: 10;
-    z-index: 10;
+}
+
+.link {
+  transition: transform 0.3s ease; /* Smooth transition for the transform effect */
+}
+
+.link:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1033px) {
+  /* .parallax__bg {
+    transform: translateY(-200px);
+  } */
+   .hero__title {
+    font-size: 30px;
+   }
+   .wrapper > span {
+    font-size: 60px;
   }
-  
-  .parallax__bg {
-    --parallax-speed: -10;
-  
-    z-index: 1;
-    min-height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .parallax__dust {
-    --parallax-speed: -20;
-    z-index: 2;
-  }
-  
-  .parallax__luna {
-    --parallax-speed: 50;
-    z-index: 3;
-  }
-  
-  .parallax__manny {
-    --parallax-speed: 30;
-    z-index: 4;
-  }
-  
-  .parallax__jax {
-    --parallax-speed: 10;
-    z-index: 5;
-  }
-  
-  .parallax__rays {
-    --parallax-speed: 50;
-    z-index: 3;
-  }
-  
-  .parallax__foreground-front,
-  .parallax__foreground-back {
-    z-index: 999;
-    align-self: end;
-  }
-  
-  .parallax__foreground-back {
-    transform: scaleY(1.2);
-    transform-origin: bottom;
-    mix-blend-mode: hard-light;
-  }
-  
-  .main-content {
-    position: relative;
-    /* z-index: 1; */
-    background: hsl(238, 100%, 6%);
-    padding-block: 6rem;
-  }
-  
-  @keyframes parallax {
-    to {
-      transform: 
-        translateY(calc(var(--parallax-speed) * 200px));
-    }
-  }
-  
-  /* general styling */
-  
-  html {
-    color-scheme: dark;
-  }
-  
-  body {
-    margin: 0;
-    font-family: "Rubik", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700; /* for demo only */
-    text-transform: uppercase; /* for demo only */
-    min-height: 300vh; /* for demo only */
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-  }
-  
-  .wrapper {
-    width: min(65rem, 100% - 4rem);
-    margin-inline: auto;
-  }
-  
-  .flex-group {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .button {
-    font: inherit;
-    font-style: italic;
-    text-transform: uppercase;
-    background: hsl(279, 75%, 59%);
-    padding: 1em 2em;
-    border: 0;
-    border-radius: 0.125em;
-  }
-  
-  .primary-header {
-    padding-block: 2rem;
-  }
-  
-  .primary-header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .primary-nav ul {
-    flex: 1;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-  
-  .primary-nav a {
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  
-  .logo {
-    max-width: 100px;
-    position: relative;
-  
-    &::after {
-      content: "";
-      position: absolute;
-      inset: -3rem;
-      z-index: -1;
-      background: radial-gradient(hsl(0 0% 100% / 0.5), transparent 70%);
-    }
-  }
-  
-  .hero {
-    margin-block-start: max(20vh, 8rem);
-  }
-  
-  .hero__title {
-    font-size: 6rem;
-    max-width: 10ch;
-    line-height: 1;
-    font-style: italic;
-    font-weight: 900;
-    position: relative;
-  
-    > span {
-      font-style: normal;
-      font-size: 0.5em;
-      display: block;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: black;
-      z-index: -1;
-      scale: 2;
-      opacity: 0.5;
-      filter: blur(5rem);
-      translate: -50%;
-    }
-  }
-  
+}
