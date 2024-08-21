@@ -5,6 +5,8 @@ import bg from "./images/banner-dunes.jpeg";
 import bgWide from "./images/banner-dunes-wide.jpeg";
 import Logo from "./images/flip.png";
 import Dust from "./images/dust.webp"
+import fgBack from "./images/foreground-back.webp";
+import fgFront from "./images/foreground-front.webp"
 import { ReactLenis } from "@studio-freight/react-lenis";
 
 const Landing = () => {
@@ -76,12 +78,12 @@ const Landing = () => {
           {/* <img className="parallax__rays" src="assets/rays.webp" alt="Dust" /> */}
           <img
             className="parallax__foreground-back"
-            src="assets/foreground-back.webp"
+            src={fgBack}
             alt="Foreground Back"
           />
           <img
             className="parallax__foreground-front"
-            src="assets/foreground-front.webp"
+            src={fgFront}
             alt="Foreground Front"
           />
           <img className="parallax__jax" src={Logo} alt="Jax Character" />
