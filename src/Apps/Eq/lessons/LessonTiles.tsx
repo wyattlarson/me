@@ -11,7 +11,7 @@ interface Lesson {
 
 const lessons: Lesson[] = [
   { title: 'The Swede', link: '/lessons/swede', date: '01-Mar-2024', image: require('../images/Race.jpg') },
-  { title: 'Be Still', link: '/lessons/bestill', date: '10-Oct-2024', image: 'https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default' },
+  { title: 'Be Still', link: '/lessons/bestill', date: '13-Oct-2024', image: 'https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default' },
   // Add more lessons here...
 ];
 

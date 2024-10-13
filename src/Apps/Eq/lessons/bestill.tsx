@@ -50,16 +50,17 @@ const Quote = styled.blockquote`
   color: black;
   margin: 0;
 `;
-const LessonTitle = styled.div`
+const LessonTitle = styled.a`
+  display: block;
   text-align: center;
   text-transform: uppercase;
-  background-image: url("https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default"); /* Replace with your image path */
-  background-size: cover; /* Adjusts the size of the background image */
-  background-position: center; /* Centers the image */
-  color: white; /* Text color */
-  padding: 20px; /* Adds padding for better visibility */
-  border-radius: 8px; /* Optional: rounds the corners */
-  position: relative; /* Required for absolute positioning of subheading */
+  background-image: url('https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none; /* Remove underline */
 `;
 
 const LessonTitleText = styled.h2`
@@ -74,6 +75,8 @@ const AuthorName = styled.h3`
 `;
 
 function BeStill(props: any) {
+    const talkLink = "gospellibrary://content/conferences/2024/april/session-2/talk/david-a-bednar"; // Replace with the actual content ID
+
   return (
     <div>
       <Navbar>
@@ -82,7 +85,7 @@ function BeStill(props: any) {
       </Navbar>
 
       <Container>
-        <LessonTitle>
+        <LessonTitle href={talkLink}>
           <LessonTitleText>Be Still, and Know That I Am God</LessonTitleText>
           <AuthorName>David A. Bednar</AuthorName>
         </LessonTitle>
@@ -93,8 +96,8 @@ function BeStill(props: any) {
             did not know quiet like that existed.”
           </Quote>
           <p>
-            Reflect on how modern life often distracts us from experiencing
-            stillness.
+            How does modern life often distract us from experiencing
+            stillness? Why did this stand out to the journalist?
           </p>
         </Section>
 
