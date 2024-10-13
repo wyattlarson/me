@@ -6,7 +6,6 @@ import Fender from '../images/fender.jpg'
 import Race from '../images/Race.jpg'
 import Grands from '../images/grands.png'
 import Me from '../images/meanddad.jpg'
-import { ReactLenis } from "@studio-freight/react-lenis";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
