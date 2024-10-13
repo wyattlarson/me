@@ -102,6 +102,18 @@ const CarouselImage = styled.img`
   border-radius: 8px;
 `;
 
+const NumberOverlay = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+`;
+
 const Arrow = styled.button`
   position: absolute;
   top: 50%;
@@ -225,6 +237,9 @@ function BeStill(props: any) {
 
           <CarouselContainer>
             <CarouselImage src={images[currentIndex]} alt="Carousel" />
+            <NumberOverlay>
+              {currentIndex + 1} / {images.length}
+            </NumberOverlay>
             <LeftArrow onClick={goToPrevious}>&lt;</LeftArrow>
             <RightArrow onClick={goToNext}>&gt;</RightArrow>
           </CarouselContainer>
