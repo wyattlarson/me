@@ -168,7 +168,7 @@ function BeStill(props: any) {
   return (
     <div>
       <Navbar>
-        <BackButton to="/eq">Home</BackButton>
+        <BackButton to="/eq">HOME</BackButton>
         <Title>Elder's Quorum Lessons</Title>
       </Navbar>
 
