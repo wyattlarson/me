@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./eq.css";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import image1 from "../images/fire/1.jpg";
+import image2 from "../images/fire/2.jpg";
+import image3 from "../images/fire/3.jpg";
+import image4 from "../images/fire/4.jpg";
+import image5 from "../images/fire/5.jpg";
+import image6 from "../images/fire/6.jpg";
+import image7 from "../images/fire/7.jpg";
+import image8 from "../images/fire/8.jpg";
+import image9 from "../images/fire/9.jpg";
+import image10 from "../images/fire/10.jpg";
 
 const Navbar = styled.div`
   background-color: white;
@@ -66,8 +76,7 @@ const LessonTitle = styled.a`
   padding: 20px;
   border-radius: 8px;
   text-decoration: none;
-text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
-
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
 `;
 
 const LessonTitleText = styled.h2`
@@ -81,9 +90,68 @@ const AuthorName = styled.h3`
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for readability */
 `;
 
+const CarouselContainer = styled.div`
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+`;
+
+const CarouselImage = styled.img`
+  width: 100%;
+  border-radius: 8px;
+`;
+
+const Arrow = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  &:focus {
+    outline: none;
+  }
+`;
+
+const LeftArrow = styled(Arrow)`
+  left: 10px;
+`;
+
+const RightArrow = styled(Arrow)`
+  right: 10px;
+`;
+
 function BeStill(props: any) {
   const talkLink =
     "https://www.churchofjesuschrist.org/study/general-conference/2024/04/21bednar?lang=eng"; // Replace with the actual content ID
+
+  const images = [
+    image1, // Replace with your image URLs
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex: number) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex: number) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <div>
@@ -152,10 +220,21 @@ function BeStill(props: any) {
             evacuated, but my father stayed behind. Firefighter's were not
             willing to try to save the house, but they said they would come up
             to check after the worst had passed. We watched from miles away as
-            an explosion of fame engulfed my house, with my dad inside. 
+            an explosion of flame engulfed my house, with my dad inside.
           </p>
-          
-          <p>How can we rely on God in challenging times?</p>
+
+          <CarouselContainer>
+            <CarouselImage src={images[currentIndex]} alt="Carousel" />
+            <LeftArrow onClick={goToPrevious}>&lt;</LeftArrow>
+            <RightArrow onClick={goToNext}>&gt;</RightArrow>
+          </CarouselContainer>
+
+          <p>
+            Its easy to say that everything is in God's hands and to relax when
+            bad things are happening to other people, how can we use this
+            perspective when something horrible is happening to you in the
+            moment?
+          </p>
         </Card>
 
         <Card>
