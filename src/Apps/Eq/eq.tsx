@@ -1,89 +1,200 @@
-import React from 'react';
-import './eq.css';
-import Truck from './images/truck.jpg'
-import Gramps from './images/Gramps.jpg'
-import Fender from './images/fender.jpg'
-import Race from './images/Race.jpg'
-import Grands from './images/grands.png'
-import Me from './images/meanddad.jpg'
-import { ReactLenis } from "@studio-freight/react-lenis";
+import React from "react";
+import LessonTiles from "./lessons/LessonTiles";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
+const Navbar = styled.div`
+  background-color: white;
+  color: black; /* Fixed text color */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+`;
 
+const BackButton = styled(Link)`
+  background-color: #007da5;
+  color: white;
+  padding: 10px 20px;
+  margin-right: auto; /* Pushes the button to the left */
+  text-decoration: none;
+  font-weight: bold;
+`;
 
+const Title = styled.div`
+  color: black;
+  margin-right: auto; /* Pushes the button to the left */
+  text-transform: uppercase;
+  font-size: 18px;
+`;
+
+const Banner = styled.div<{ backgroundImage: string }>`
+  background-image: url(${(props) => props.backgroundImage});
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-size: 20px;
+  position: relative; /* Needed for the overlay */
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure it is below the text */
+    border-radius: 8px; /* Match the banner's border radius if applicable */
+  }
+
+  & > span {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: add a text shadow */
+  }
+    & > a {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: add a text shadow */
+  }
+
+  text-transform: uppercase; /* Keep this for consistent styling */
+`;
+
+const Button = styled.a`
+  display: block;
+  background-color: #007da5;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 8px;
+  text-decoration: none;
+  z-index: 4;
+`;
+
+const Card = styled.div<{ backgroundImage: string }>`
+  background-image: url(${(props) => props.backgroundImage});
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  position: relative; /* Needed for the overlay */
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    border-radius: 8px; /* Match the card's border radius */
+    z-index: 1; /* Ensure it is below the text */
+  }
+
+  & > * {
+    position: relative; /* Position child elements above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: add a text shadow */
+  }
+`;
+
+const CardTitle = styled.h2`
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+`;
+
+const CardContent = styled.div`
+  line-height: 1.6; /* For better readability */
+`;
 
 function EqComponent(props: any) {
-  const lenisOptions = {
-    lerp: 0.1,
-    duration: 1.5,
-    smoothTouch: false, //smooth scroll for touch devices
-    smooth: true,
-  };
+  const googleSheetLink =
+    "https://docs.google.com/spreadsheets/d/17hnM6C1sbYS2Hnc3ewtLkLqx747O33Ii_tOx8PIDSH4/edit?usp=sharing";
+  const backgroundImage = require("./images/jesus.webp"); // Replace with your image path
+  const jesus = require("./images/jesus-portrait.webp");
+
   return (
-    <ReactLenis root options={lenisOptions}>
-    <div className="component-container" style={{ color: props.activeColor }}>
-      <div className="section-title">Elders Quorum Lesson 1</div>
-      <div className="image-container">
-        <img src={Truck} alt="Truck Meme" />
-      </div>
+    <div>
+      <Navbar>
+        <BackButton to="/eq">Home</BackButton>
+        <Title>Summit Ward Elder's Quorum</Title>
+      </Navbar>
+      <Banner
+        backgroundImage={backgroundImage}
+        onClick={() => window.open(googleSheetLink, "_blank")}
+      >
+        <span>
+          Help the missionaries by adding the times during the week when you are
+          most available!
+        </span>
+        <Button
+          href={googleSheetLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Go to Form
+        </Button>
+      </Banner>
 
-      <div className="content-container">
-        <div className="paragraph-container">
-          <div className="section-title">The "Swede"</div>
-          <div className="image-container">
-            <img src={Gramps} alt="Grandpa" />
-          </div>
-          <hr />
-          <p>"They made their home in Highland Park, and attended the Garbanza Ward.
-            He became a partner to the two owners of the Harbor Fish Company, and from 1941, having borrowed money to buy out one of the partners, he buried himself in the business.
-            He said, “I made it pay well; I increased [business volume] by ten times, and people called me successful, but it was a night mare: Repulsive work, labor shortages, government interference, and very little sleep and no family life for the next eight years until I wound up in White Memorial Hospital, and there, it took me two weeks to recuperate.” He had a heart problem and a hemorrhaging ulcer.
-            Lloyd had never been inactive. He hated every minute of it. In seven months he gained weight, from 155 to 245 lbs. He hated himself and was grouchy with everyone. At 50 years of age, many thought he was through.
-            He went back to his Dr. for a checkup about a year later.  The Dr. said, “I don’t know how you did it, but you have recovered wonderfully.” For him, biking was a godsend and restored his well beaten body to a robust vigorous one of full energy and vitality."</p>
-        </div>
-        <div className="image-container">
-          <img src={Fender} alt="Fender AD" />
-        </div>
-        <div className="image-container">
-          <img src={Race} alt="Race" />
-        </div>
-        
-        <hr />
-
-        <div className="section-title">Results</div>
-        <p>The following attests to Lloyd’s business acumen, his tact and charisma in business and other phases of life, and most of all, his overall integrity, fairness, dependability and compassion toward his fellowmen—and his testimony of—The Church of Jesus Christ of Latter-day Saints.
-
-          Moreover, we need to be well aware that Lloyd became active in his church—giving up for good, his cigars and beer at age 50, after the hospitalization for a bleeding-ulcer-scare. As you have read in previous parts of his history, it is impressed upon us that he always had pride in his Mormon heritage, and never, was he critical of, or an antagonist of the Church; for he cooperated in every way through encouragement and affording transportation to family that didn’t drive, to always take them to their church meetings and activities.</p>
-        
-          <div className="image-container">
-          <img src={Grands} alt="Shirts" />
-        </div>
-        <div className="image-container">
-          <img src={Me} alt="Me and Dad" />
-        </div>
-        <div className="list-container">
-          <div className="section-title">Questions</div>
+      {/* Ward Mission Plan Section */}
+      <Card backgroundImage={jesus}>
+        <CardTitle>Ward Mission Plan</CardTitle>
+        <CardContent>
+          <p>
+            <strong>Vision Statement:</strong> The Summit Ward’s Missionary
+            Vision is to help all develop a personal relationship with Jesus
+            Christ and provide opportunities to participate in saving temple
+            ordinances.
+          </p>
+          <p>
+            <strong>
+              1. Develop a personal relationship with Jesus Christ
+            </strong>
+          </p>
           <ul>
-            <li>How does keeping yourself physically healthy bless your family and your posterity?</li>
-            <li>What traditions or physical activities do you want to pass down in your family?</li>
-            <li>A man prioritizing his physical health had a generational impact on his family. God gives us health commandments like the Word of Wisdom. How does taking care of our bodies affect our spiritual health?</li>
+            <li>
+              Help all build a strong foundation of prayer, scripture study and
+              church attendance.
+            </li>
+            <li>
+              Become better disciples of Jesus Christ by building personal
+              friendships and showing love through serving others and
+              ministering to those around us.
+            </li>
+            <li>
+              Become better neighbors by loving, sharing and inviting others to
+              participate in our lives and homes.
+            </li>
           </ul>
-        </div>
-
-        <div className="section-title">Omar's Story</div>
-        <div className="paragraph-container">
-          <p style={{ fontStyle: "italic" }}>For the Sake of Your Posterity, October 2023 Conference</p>
-          <p>Elder Carlos A. Godoy shared an experience from his time in Peru, he had a chance encounter with a taxi driver named Omar, who was a member of the Church but had become inactive. Elder Godoy discovers Omar's journey away from the Church and his desire to return for the sake of his children. This encounter leads to a series of events that culminate in Omar and his family rejoining the Church, and they end up getting sealed in the temple.</p>
-        </div>
-        <div className="list-container">
-          <div className="section-title">Questions</div>
+          <p>
+            <strong>
+              2. Provide Opportunities to participate in saving ordinances
+            </strong>
+          </p>
           <ul>
-            <li>How do you think Omar's decision to return to the Church impacted not only his own life but also the lives of his family members and future generations?</li>
-            <li>What are some common reasons why individuals may become less active or lukewarm in their participation in the Church? How can we address these concerns and support individuals in their spiritual journey?</li>
-            <li>Reflecting on your own spiritual journey, what legacy do you hope to leave for future generations?</li>
+            <li>
+              Develop a strong culture and love for family history in our ward
+              and families.
+            </li>
+            <li>
+              Help individuals and families to progress along my covenant path.
+            </li>
+            <li>Temple</li>
           </ul>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
+
+      <LessonTiles />
     </div>
-    </ReactLenis>
   );
 }
 

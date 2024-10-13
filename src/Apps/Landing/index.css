@@ -81,18 +81,18 @@
 
 html {
   color-scheme: dark;
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik", sans-serif; */
   font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  /* font-weight: 700; */
+  /* text-transform: uppercase; */
 }
 
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik", sans-serif; */
   font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase; 
+  /* font-weight: 700; */
+  /* text-transform: uppercase;  */
 }
 
 img {
