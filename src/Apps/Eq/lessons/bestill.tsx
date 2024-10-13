@@ -54,7 +54,7 @@ const LessonTitle = styled.a`
   display: block;
   text-align: center;
   text-transform: uppercase;
-  background-image: url('https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default');
+  background-image: url("https://www.churchofjesuschrist.org/imgs/bc06a8e4f38f11eeb999eeeeac1e31d305764595/full/640%2C/0/default");
   background-size: cover;
   background-position: center;
   color: white;
@@ -75,7 +75,8 @@ const AuthorName = styled.h3`
 `;
 
 function BeStill(props: any) {
-    const talkLink = "gospellibrary://content/conferences/2024/april/session-2/talk/david-a-bednar"; // Replace with the actual content ID
+  const talkLink =
+    "https://www.churchofjesuschrist.org/study/general-conference/2024/04/21bednar?lang=eng"; // Replace with the actual content ID
 
   return (
     <div>
@@ -92,12 +93,21 @@ function BeStill(props: any) {
         <Section>
           <h3>The Importance of Stillness</h3>
           <Quote>
+            During a media day for a new temple, Bednar guided journalists
+            through the sacred space, explaining its purposes and answering
+            their questions. Before entering the celestial room, which
+            symbolizes heavenly peace, Bednar asked them to remain silent to fully
+            appreciate the stillness. Afterward, one journalist expressed
+            profound awe, stating they had never known such quietness.
+          </Quote>
+          <br></br>
+          <Quote>
             “I have never experienced anything like that in my entire life. I
             did not know quiet like that existed.”
           </Quote>
           <p>
-            How does modern life often distract us from experiencing
-            stillness? Why did this stand out to the journalist?
+            How does modern life often distract us from experiencing stillness?
+            Why did this stand out to the journalist?
           </p>
         </Section>
 
