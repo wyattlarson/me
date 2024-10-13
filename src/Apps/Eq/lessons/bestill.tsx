@@ -27,28 +27,33 @@ const Title = styled.div`
   margin-right: auto;
 `;
 
-const Container = styled.div`
-  padding: 16px;
-  max-width: 800px;
-  margin: 0 auto;
-  color: black;
-`;
-
 const Section = styled.div`
   margin-bottom: 24px;
 `;
 
+const Container = styled.div`
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9; /* Soft background color */
+  color: black;
+  border-radius: 8px; /* Round corners */
+`;
+
 const Card = styled.div`
-  background-color: #f0f0f0;
+  background-color: #e8e8e8; /* Slightly darker background */
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
 `;
 
 const Quote = styled.blockquote`
   font-style: italic;
-  color: black;
+  color: #333; /* Darker color for better readability */
   margin: 0;
+  padding-left: 16px; /* Indent the quote */
+  border-left: 4px solid #007da5; /* Left border for quotes */
 `;
 const LessonTitle = styled.a`
   display: block;
@@ -60,7 +65,9 @@ const LessonTitle = styled.a`
   color: white;
   padding: 20px;
   border-radius: 8px;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
+
 `;
 
 const LessonTitleText = styled.h2`
@@ -96,8 +103,8 @@ function BeStill(props: any) {
             During a media day for a new temple, Bednar guided journalists
             through the sacred space, explaining its purposes and answering
             their questions. Before entering the celestial room, which
-            symbolizes heavenly peace, Bednar asked them to remain silent to fully
-            appreciate the stillness. Afterward, one journalist expressed
+            symbolizes heavenly peace, Bednar asked them to remain silent to
+            fully appreciate the stillness. Afterward, one journalist expressed
             profound awe, stating they had never known such quietness.
           </Quote>
           <br></br>
@@ -121,10 +128,33 @@ function BeStill(props: any) {
 
         <Card>
           <h4>Trust in God</h4>
+          <p>
+            In 1833, the Saints in Missouri were the targets of intense
+            persecution. Mobs had driven them from their homes in Jackson
+            County, and some Church members had tried to establish themselves in
+            other nearby counties. But the persecution continued, and the
+            threats of death were many. In these challenging circumstances, the
+            Lord revealed the following instruction to the Prophet Joseph Smith
+            in Kirtland, Ohio:
+          </p>
           <Quote>
             “Therefore, let your hearts be comforted concerning Zion; for all
             flesh is in mine hands; be still and know that I am God.”
           </Quote>
+          <p>How can we rely on God in challenging times?</p>
+        </Card>
+
+        <Card>
+          <h4>A Seven Year Old's Trust in God</h4>
+          <p>
+            21 years ago, in October of 2003, the worst wildfire in my life
+            threatened to destroy my families home. My mother and siblings
+            evacuated, but my father stayed behind. Firefighter's were not
+            willing to try to save the house, but they said they would come up
+            to check after the worst had passed. We watched from miles away as
+            an explosion of fame engulfed my house, with my dad inside. 
+          </p>
+          
           <p>How can we rely on God in challenging times?</p>
         </Card>
 
@@ -149,16 +179,16 @@ function BeStill(props: any) {
         <Section>
           <h3>Practical Applications</h3>
           <p>
-            Encourage participants to designate a quiet area in their homes for
-            prayer and reflection.
+            Designate a quiet area and time in your day for prayer and
+            reflection.
           </p>
           <p>
-            Discuss the importance of keeping the Sabbath as a time to focus on
-            spiritual growth.
+            How does the commandment of keeping the Sabbath Day holy come into
+            play as a time to focus on spiritual growth?
           </p>
           <p>
-            Suggest a daily practice of quiet meditation or prayer to connect
-            with God.
+            We need a daily practice of quiet meditation and prayer to connect
+            with God. What keeps us from five - fifteen minutes of quiet a day?
           </p>
         </Section>
 
@@ -166,7 +196,8 @@ function BeStill(props: any) {
           <h3>Conclusion</h3>
           <p>
             As we build our foundation on Jesus Christ, we will experience peace
-            and stillness in our souls.
+            and stillness in our souls. The gospel is a message of peace, not of
+            guilt or stress.
           </p>
         </Section>
       </Container>
